@@ -1,10 +1,10 @@
-<h1 align="center">Hi 👋, this is Estacio Cultural Bouwer</h1>
-<h3 align="center">Destinado a Documentacion/Blog</h3>
+<h1 align="center">Hi 👋, this is Estación Cultural Bouwer</h1>
+<h3 align="center">Destinado a Documentación/Blog</h3>
 
-- ⚡ Proyecto Estacio Cultural Bouwer
+- ⚡ Proyecto Estación Cultural Bouwer
 - ⚡ El área de cultura tiene por meta principal generar procesos de desarrollo cultural destinados a la preservación, transmisión y fomento de muestras artísticas y culturales propias de la comunidad.
 
-<h3 align="left">Connect with Estacio Cultural Bouwer:</h3>
+<h3 align="left">Connect with Estación Cultural Bouwer:</h3>
 <p align="left">estacionculturalbouwer@gmail.com
 </p>
 

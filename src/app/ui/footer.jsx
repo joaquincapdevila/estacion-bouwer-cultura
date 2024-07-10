@@ -5,7 +5,7 @@ export function Footer() {
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024{" "}
           <a href="/" class="hover:underline">
-            Estacion Cultural Bouwer
+            Estación Cultural Bouwer
           </a>
           . All Rights Reserved.
         </span>
