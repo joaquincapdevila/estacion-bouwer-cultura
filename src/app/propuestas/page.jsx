@@ -7,7 +7,7 @@ export default function Propuestas() {
         <h2 className="text-4xl font-extrabold dark:text-white mb-6">
           Propuestas
         </h2>
-        <div className="text-gray-500 dark:text-gray-400">
+        <div className="text-gray-500 dark:text-gray-400 py-2">
           <h5 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
             Principales funciones del área:
           </h5>

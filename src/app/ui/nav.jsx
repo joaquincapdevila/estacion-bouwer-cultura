@@ -1,9 +1,8 @@
 "use client";
-import { useState } from "react";
-import ReactDOM from "react-dom";
 import { usePathname } from "next/navigation";
 import { menu } from "../lib/placeholder-data";
 import { SideNav } from "./sidenav";
+import Link from "next/link";
 export function PhoneNavegacion() {
   <nav className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
     <div className="grid h-full max-w-lg grid-cols-5 mx-auto">
@@ -139,13 +138,13 @@ export function Nav() {
         <ul className="hidden md:flex">
           {menu.map((datos) => (
             <li key={datos.nombre} className="me-2">
-              <a
+              <Link
                 href={datos.href}
                 className={`inline-block p-4 border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300 ${
                   path == datos.href ? "text-red-300" : ""
                 }`}>
                 {datos.nombre}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

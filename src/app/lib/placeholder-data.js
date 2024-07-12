@@ -1,3 +1,9 @@
+import nosotros from "../../../public/nosotros.svg";
+import inicio from "../../../public/inicio.svg";
+import propuestas from "../../../public/propuestas.svg";
+import Noticias from "../../../public/noticias.svg";
+import actividades from "../../../public/actividades.svg";
+
 const stuff = [
   {
     id: "3958dc9e-712f-4377-85e9-fec4b6a6442a",
@@ -81,29 +87,33 @@ const customers = [
 const menu = [
   {
     nombre: "Inicio",
-    path: "",
     href: "/",
     span: "",
+    src: inicio,
   },
   {
     nombre: "Propuestas",
     href: "/propuestas",
     span: "",
+    src: propuestas,
   },
   {
     nombre: "Nosotros",
     href: "/nosotros",
     span: "",
+    src: nosotros,
   },
   {
     nombre: "Noticias",
     href: "/noticias",
     span: "",
+    src: Noticias,
   },
   {
     nombre: "Actividades",
     href: "/actividades",
     span: "",
+    src: actividades,
   },
 ];
 

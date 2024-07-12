@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { menu } from "../lib/placeholder-data";
 import Link from "next/link";
+import Image from "next/image";
 
 export function SideNav() {
   const [state, setstate] = useState(false);
@@ -69,16 +70,15 @@ export function SideNav() {
                 <li key={data.nombre}>
                   <Link
                     href={data.href}
-                    onTouchEnd={HandleNav}
+                    onClick={HandleNav}
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <svg
+                    <Image
+                      src={data.src}
+                      alt={data.nombre}
+                      width={6}
+                      height={6}
                       className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 18 18">
-                      {data.path}
-                    </svg>
+                    />
                     <span className="flex-1 ms-3 whitespace-nowrap">
                       {data.nombre}
                     </span>
