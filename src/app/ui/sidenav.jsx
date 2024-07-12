@@ -63,12 +63,12 @@ export function SideNav() {
             </svg>
             <span className="sr-only">Close menu</span>
           </button>
-          <div className="py-4 overflow-y-auto">
-            <ul>
+          <div className="py-4 max-h-screen">
+            <ul className="flex flex-col overflow-y-auto items-start">
               {menu.map((data) => (
                 <li key={data.nombre}>
                   <Link
-                    href="#"
+                    href={data.href}
                     onTouchEnd={HandleNav}
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                     <svg
@@ -82,9 +82,9 @@ export function SideNav() {
                     <span className="flex-1 ms-3 whitespace-nowrap">
                       {data.nombre}
                     </span>
-                    <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                    {/* <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
                       Pro
-                    </span>
+                    </span> */}
                   </Link>
                 </li>
               ))}
