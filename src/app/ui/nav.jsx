@@ -1,7 +1,9 @@
 "use client";
+import { useState } from "react";
+import ReactDOM from "react-dom";
 import { usePathname } from "next/navigation";
 import { menu } from "../lib/placeholder-data";
-
+import { SideNav } from "./sidenav";
 export function PhoneNavegacion() {
   <nav className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
     <div className="grid h-full max-w-lg grid-cols-5 mx-auto">
@@ -128,13 +130,13 @@ export function PhoneNavegacion() {
     </div>
   </nav>;
 }
+
 export function Nav() {
   const path = usePathname();
-
   return (
     <nav className="fixed z-50 w-screen text-[11px] sm:text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 overflow-hidden">
-      <div className="flex justify-center">
-        <ul className="flex flex-wrap">
+      <div className="flex justify-end md:justify-center md:items-center">
+        <ul className="hidden md:flex">
           {menu.map((datos) => (
             <li key={datos.nombre} className="me-2">
               <a
@@ -147,6 +149,7 @@ export function Nav() {
             </li>
           ))}
         </ul>
+        <SideNav />
       </div>
     </nav>
   );

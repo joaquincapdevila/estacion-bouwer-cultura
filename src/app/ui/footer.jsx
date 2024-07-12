@@ -7,11 +7,14 @@ export function Footer() {
           <a href="/" class="hover:underline">
             Estación Cultural Bouwer
           </a>
-          . All Rights Reserved.
+          .{" "}
+          <span className="hidden md:inline-block">
+            Todos los derechos reservados.
+          </span>
         </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <ul class="hidden lg:flex lg:flex-wrap lg:items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <a href="/nosotros" class="hover:underline me-4 md:me-6">
+            <a href="/nosotros" class="hover:underline me-4 lg:me-6">
               Nosotros
             </a>
           </li>
@@ -21,7 +24,7 @@ export function Footer() {
             </a>
           </li>
           <li>
-            <a href="#" class="hover:underline">
+            <a href="#" class="hidden md:block hover:underline">
               estacionculturalbouwer@gmail.com
             </a>
           </li>
