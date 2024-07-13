@@ -48,7 +48,7 @@ export function TimeLine(day) {
 
 export function TimeLineInvierno() {
   return (
-    <div className="flex flex-col justify-center gap-12 py-12">
+    <div className="flex flex-col justify-center gap-12 py-12 px-4">
       {eventos.dates.map((dia) => {
         console.log(dia);
         return (

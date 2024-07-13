@@ -1,8 +1,16 @@
-import { Inter, Libre_Baskerville, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./ui/globals.css";
 import { Nav } from "./ui/nav";
 import { Footer } from "./ui/footer";
 const montserrat = Montserrat({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "Estacion Cultural Bouwer",
+  description: "Cultura Cordoba, cordoba",
+  icons: {
+    icon: "/svgBouwer.svg",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
