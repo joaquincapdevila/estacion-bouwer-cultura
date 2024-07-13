@@ -26,7 +26,7 @@ export function NoticiaPrimaria(props) {
       <h2 class="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
         {props.title}
       </h2>
-      <p class="mb-3 text-gray-500 dark:text-gray-400">{props.descripcion}</p>
+      <p class="mb-3">{props.descripcion}</p>
       <a
         href="#"
         class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
@@ -63,9 +63,7 @@ export function Noticia(props) {
       <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
         {props.title}
       </h2>
-      <p className="mb-3 text-gray-500 dark:text-gray-400">
-        {props.decripcion}
-      </p>
+      <p className="mb-3">{props.decripcion}</p>
       <a
         href="#"
         className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">

@@ -5,20 +5,18 @@ export default function Nosotros() {
   return (
     <main className="min-h-screen flex flex-col max-w-5xl items-center justify-between pt-24 m-auto overflow-hidden">
       <section className="py-16 px-4 sm:p-6 md:px-8 m-auto">
-        <h2 className="text-4xl font-extrabold dark:text-white mb-6 ">
-          Nosotros
-        </h2>
-        <div className="w-500 h-400 object-cover text-gray-500 dark:text-gray-400">
+        <h2 className="text-4xl font-extrabold mb-6 ">Nosotros</h2>
+        <div className="w-500 h-400 object-cover text-white">
           <p className="py-2">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-300 from-red-500">
               Estación Cultural Bouwer
             </span>
             <br />
-            <span className="font-semibold text-gray-900 underline dark:text-white decoration-blue-500">
+            <span className="font-semibold underline decoration-blue-500">
               Horarios de atención: lunes 9h a 12h.
             </span>
             <br />
-            <span className="font-semibold text-gray-900 underline dark:text-white decoration-red-500">
+            <span className="font-semibold underline decoration-red-500">
               Municipalidad de Bouwer.
             </span>
           </p>
@@ -31,7 +29,7 @@ export default function Nosotros() {
             </p>
             <div className="grid grid-cols-2 gap-2">
               <p className="col-span-2 sm:col-span-1">
-                <span className="font-semibold text-gray-900 underline dark:text-white decoration-indigo-500">
+                <span className="font-semibold underline text-transparent bg-clip-text bg-red-400 decoration-indigo-500">
                   Misión:
                 </span>{" "}
                 Nuestra misión es promover y preservar la riqueza cultural de
@@ -41,7 +39,7 @@ export default function Nosotros() {
                 difusión de nuestras tradiciones y patrimonio.
               </p>
               <p className="col-span-2 sm:col-span-1">
-                <span className="font-semibold text-gray-900 underline dark:text-white decoration-green-500">
+                <span className="font-semibold underline text-transparent bg-clip-text bg-red-400 decoration-green-500">
                   Visión:
                 </span>{" "}
                 Aspiramos a ser un referente cultural en la región, reconocidos
