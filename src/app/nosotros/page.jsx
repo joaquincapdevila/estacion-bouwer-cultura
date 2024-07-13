@@ -54,7 +54,7 @@ export default function Nosotros() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 sm:p-6 md:px-8 m-auto w-full">
+      <section className="py-16 px-4 sm:p-6 md:px-8 m-auto w-full flex">
         <CardStuff />
       </section>
     </main>
