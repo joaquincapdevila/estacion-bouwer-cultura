@@ -1,5 +1,7 @@
-import { customers, noticiasjson } from "../lib/placeholder-data";
-import { Noticia, NoticiaPrimaria } from "../ui/noticia";
+import { Suspense } from "react";
+import { noticiasjson } from "../lib/placeholder-data";
+import { ListNoticias, NoticiaPrimaria } from "../ui/noticia";
+import { NoticiaSkeleton } from "../ui/skeletons";
 
 export default function Noticias() {
   return (
@@ -11,14 +13,12 @@ export default function Noticias() {
           descripcion={noticiasjson.descripcion}
         />
       </section>
+
       <section className="max-h-screen lg:overflow-y-auto col-span-2 lg:col-span-1">
-        <ul>
-          {customers.map((data) => (
-            <li key={data.id}>
-              <Noticia />
-            </li>
-          ))}
-        </ul>
+        <NoticiaSkeleton />
+        {/* <Suspense fallback={NoticiaSkeleton}>
+          <ListNoticias />
+        </Suspense> */}
       </section>
     </main>
   );

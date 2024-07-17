@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { eventos } from "../lib/placeholder-data";
-
 import children from "../../../public/children.svg";
-import friendship from "../../../public/friendship.svg";
 import { Tabla } from "./table";
 
 export function Actividad() {
@@ -17,7 +15,7 @@ export function Actividad() {
       <Tabla />
       <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800 lg:min-w-[1024px]">
         <p class="text-xl text-wrap italic font-medium leading-relaxed text-gray-900 dark:text-white">
-          &apos;{eventos.notes}&apos;
+          &quot;{eventos.notes}&quot;
         </p>
       </blockquote>
 

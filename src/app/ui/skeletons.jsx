@@ -1,8 +1,9 @@
+"use server";
 // Loading animation
 const shimmer =
   "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent";
 
-export function CardSkeleton() {
+export async function CardSkeleton() {
   return (
     <div
       className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}>
@@ -17,7 +18,52 @@ export function CardSkeleton() {
   );
 }
 
-export function CardsSkeleton() {
+export async function NoticiaSkeleton() {
+  return (
+    <div
+      role="status"
+      className="w-full h-full flex flex-col justify-between p-4 space-y-4  divide-y rounded shadow animate-pulse dark:divide-gray-700 md:p-6 ">
+      <div className="flex items-center justify-between">
+        <div>
+          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+        </div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+      </div>
+      <div className="flex items-center justify-between pt-4">
+        <div>
+          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+        </div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+      </div>
+      <div className="flex items-center justify-between pt-4">
+        <div>
+          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+        </div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+      </div>
+      <div className="flex items-center justify-between pt-4">
+        <div>
+          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+        </div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+      </div>
+      <div className="flex items-center justify-between pt-4">
+        <div>
+          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+        </div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+      </div>
+      <span className="sr-only">Loading...</span>
+    </div>
+  );
+}
+
+export async function CardsSkeleton() {
   return (
     <>
       <CardSkeleton />
@@ -28,7 +74,7 @@ export function CardsSkeleton() {
   );
 }
 
-export function RevenueChartSkeleton() {
+export async function RevenueChartSkeleton() {
   return (
     <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
       <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
@@ -43,7 +89,7 @@ export function RevenueChartSkeleton() {
   );
 }
 
-export function InvoiceSkeleton() {
+export async function InvoiceSkeleton() {
   return (
     <div className="flex flex-row items-center justify-between border-b border-gray-100 py-4">
       <div className="flex items-center">
@@ -58,7 +104,7 @@ export function InvoiceSkeleton() {
   );
 }
 
-export function LatestInvoicesSkeleton() {
+export async function LatestInvoicesSkeleton() {
   return (
     <div
       className={`${shimmer} relative flex w-full flex-col overflow-hidden md:col-span-4`}>
@@ -80,7 +126,7 @@ export function LatestInvoicesSkeleton() {
   );
 }
 
-export function DashboardSkeleton() {
+export async function DashboardSkeleton() {
   return (
     <>
       <div
@@ -100,7 +146,7 @@ export function DashboardSkeleton() {
   );
 }
 
-export function TableRowSkeleton() {
+export async function TableRowSkeleton() {
   return (
     <tr className="w-full border-b border-gray-100 last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
       {/* Customer Name and Image */}
@@ -137,7 +183,7 @@ export function TableRowSkeleton() {
   );
 }
 
-export function InvoicesMobileSkeleton() {
+export async function InvoicesMobileSkeleton() {
   return (
     <div className="mb-2 w-full rounded-md bg-white p-4">
       <div className="flex items-center justify-between border-b border-gray-100 pb-8">
@@ -161,7 +207,7 @@ export function InvoicesMobileSkeleton() {
   );
 }
 
-export function InvoicesTableSkeleton() {
+export async function InvoicesTableSkeleton() {
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
@@ -214,7 +260,7 @@ export function InvoicesTableSkeleton() {
   );
 }
 // MIAS -----------------------
-export function HeadingSkeleton() {
+export async function HeadingSkeleton() {
   return (
     <div role="status" class="max-w-sm animate-pulse">
       <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
@@ -228,7 +274,7 @@ export function HeadingSkeleton() {
   );
 }
 
-export function ImgSkeleton() {
+export async function ImgSkeleton() {
   <div
     role="status"
     class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
@@ -254,7 +300,7 @@ export function ImgSkeleton() {
   </div>;
 }
 
-export function VideoSkeleton() {
+export async function VideoSkeleton() {
   <div
     role="status"
     class="flex items-center justify-center h-56 max-w-sm bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700">
@@ -271,7 +317,7 @@ export function VideoSkeleton() {
   </div>;
 }
 
-export function CarddSkeleton() {
+export async function CarddSkeleton() {
   <div
     role="status"
     class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700">
@@ -308,7 +354,7 @@ export function CarddSkeleton() {
   </div>;
 }
 
-export function BloquecuoteSkeleton() {
+export async function BloquecuoteSkeleton() {
   <div role="status" class="animate-pulse">
     <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[640px] mb-2.5 mx-auto"></div>
     <div class="h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[540px]"></div>
@@ -328,7 +374,7 @@ export function BloquecuoteSkeleton() {
   </div>;
 }
 
-export function TableListSkeleton() {
+export async function TableListSkeleton() {
   <div
     role="status"
     class="max-w-md p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700">

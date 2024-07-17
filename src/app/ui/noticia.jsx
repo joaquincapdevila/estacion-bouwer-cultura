@@ -1,10 +1,25 @@
 import Image from "next/image";
+import { customers, noticiasjson } from "../lib/placeholder-data";
+
 import estacion1 from "../../../public/estacion2.jpg";
 import jornadaArtistica from "../../../public/jornada-artistica.jpg";
 import jornadaArtistica1 from "../../../public/jornada-artistica1.jpg";
 import jornadaArtistica2 from "../../../public/jornada-artistica2.jpg";
 import jornadaArtistica3 from "../../../public/jornada-artistica3.jpg";
 import jornadaArtistica4 from "../../../public/jornada-artistica4.jpg";
+import { resolve } from "styled-jsx/css";
+
+export function ListNoticias(props) {
+  return (
+    <ul>
+      {customers.map((data) => (
+        <li key={data.id}>
+          <Noticia />
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export function NoticiaPrimaria(props) {
   return (
