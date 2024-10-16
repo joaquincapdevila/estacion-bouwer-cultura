@@ -2,11 +2,11 @@ import Image from "next/image";
 import estacion from "../../../public/estacion.jpg";
 export default function Propuestas() {
   return (
-    <main className="min-h-screen flex flex-col max-w-5xl items-center justify-between pt-24 m-auto overflow-hidden">
+    <div className="min-h-screen flex flex-col max-w-5xl items-center justify-between pt-24 m-auto overflow-hidden">
       <section className="py-16 px-4 sm:p-6 md:px-8 m-auto flex flex-col">
         <h2 className="text-4xl font-extrabold mb-6">Propuestas</h2>
-        <div className="py-4">
-          <h5 className="mb-2 text-lg font-semibold">
+        <div className="py-4 text-lg">
+          <h5 className="mb-2 text-xl font-semibold">
             Principales funciones del área:
           </h5>
           <ul className="space-y-1 list-disc list-inside mb-2">
@@ -32,12 +32,10 @@ export default function Propuestas() {
               intercambio cultural.
             </li>
           </ul>
-
           <p>
-            {" "}
             Encargada Área de Cultura: Daniela Arce- Valeria Arce. <br />
-            Contacto:
-            <span className="font-semibold text-gray-900 underline dark:text-white decoration-blue-500">
+            Contacto:{" "}
+            <span className="font-semibold underline decoration-blue-500">
               estacionculturalbouwer@gmail.com
             </span>{" "}
             <br />
@@ -54,6 +52,6 @@ export default function Propuestas() {
           />
         </div>
       </section>
-    </main>
+    </div>
   );
 }

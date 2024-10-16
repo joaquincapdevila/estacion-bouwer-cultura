@@ -3,10 +3,10 @@ import { CardStuff } from "../ui/card";
 
 export default function Nosotros() {
   return (
-    <main className="min-h-screen flex flex-col max-w-5xl items-center justify-between pt-24 m-auto overflow-hidden">
+    <div className="min-h-screen flex flex-col max-w-5xl items-center justify-between pt-24 m-auto overflow-hidden">
       <section className="py-16 px-4 sm:p-6 md:px-8 m-auto">
         <h2 className="text-4xl font-extrabold mb-6 ">Nosotros</h2>
-        <div className="w-500 h-400 object-cover text-white">
+        <div className="w-500 h-400 object-cover text-lg">
           <p className="mb-2">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-300 from-red-500">
               Estación Cultural Bouwer
@@ -53,6 +53,6 @@ export default function Nosotros() {
       <section className="py-16 px-4 sm:p-6 md:px-8 m-auto w-full flex">
         <CardStuff />
       </section>
-    </main>
+    </div>
   );
 }

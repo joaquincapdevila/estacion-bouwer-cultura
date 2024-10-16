@@ -12,16 +12,19 @@ import { resolve } from "styled-jsx/css";
 export function ListNoticias(props) {
   return (
     <ul>
-      {customers.map((data) => (
+      {noticiasjson.map((data) => (
         <li key={data.id}>
-          <Noticia />
+          <Noticia
+            categoria={data.categoria}
+            title={data.evento}
+            descripcion={data.descripcion}
+          />
         </li>
       ))}
     </ul>
   );
 }
-
-export function NoticiaPrimaria(props) {
+export function NoticiaPrimaria({ noticia }) {
   return (
     <article
       className="p-4 md:p-8"
@@ -29,25 +32,25 @@ export function NoticiaPrimaria(props) {
       role="tabpanel"
       aria-labelledby="about-tab">
       <Image
-        class="h-60 rounded-lg object-cover pb-2"
+        className="h-60 rounded-lg object-cover pb-2"
         src={jornadaArtistica4}
         alt="image description"
         width={600}
         height={300}
       />
       <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-        {props.categoria}{" "}
+        {noticia.categoria}
       </span>
-      <h2 class="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
-        {props.title}
+      <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
+        {noticia.evento}
       </h2>
-      <p class="mb-3">{props.descripcion}</p>
+      <p className="mb-3">{noticia.descripcion}</p>
       <a
         href="#"
-        class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
+        className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
         Learn more
         <svg
-          className=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
+          className="w-2.5 h-2.5 ms-2 rtl:rotate-180"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -78,7 +81,7 @@ export function Noticia(props) {
       <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
         {props.title}
       </h2>
-      <p className="mb-3">{props.decripcion}</p>
+      <p className="mb-3">{props.descripcion}</p>
       <a
         href="#"
         className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">

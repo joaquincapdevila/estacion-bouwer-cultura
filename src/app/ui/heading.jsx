@@ -1,6 +1,6 @@
 export function Heading() {
   return (
-    <>
+    <div className="flex flex-col">
       <h1 className="mb-4 text-4xl font-extrabold leading-10 tracking-tight md:text-5xl lg:text-6xl">
         <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-300 from-red-500">
           Estación Cultural Bouwer.
@@ -29,6 +29,6 @@ export function Heading() {
           />
         </svg>
       </a>
-    </>
+    </div>
   );
 }
