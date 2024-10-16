@@ -41,7 +41,7 @@ export function NoticiaPrimaria({ noticia }) {
       <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
         {noticia.categoria}
       </span>
-      <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
+      <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-gumbo-950 hover:border-gumbo-600">
         {noticia.evento}
       </h2>
       <p className="mb-3">{noticia.descripcion}</p>
@@ -71,14 +71,14 @@ export function NoticiaPrimaria({ noticia }) {
 export function Noticia(props) {
   return (
     <article
-      className="p-4 md:p-8 border-b border-red-300"
+      className="p-4 md:p-8 border-b border-gumbo-300"
       id="about"
       role="tabpanel"
       aria-labelledby="about-tab">
       <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
         {props.categoria}
       </span>
-      <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300">
+      <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-gumbo-950 hover:border-gumbo-600">
         {props.title}
       </h2>
       <p className="mb-3">{props.descripcion}</p>

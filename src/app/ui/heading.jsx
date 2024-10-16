@@ -2,7 +2,7 @@ export function Heading() {
   return (
     <div className="flex flex-col">
       <h1 className="mb-4 text-4xl font-extrabold leading-10 tracking-tight md:text-5xl lg:text-6xl">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-300 from-red-500">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r to-gumbo-300 from-gumbo-500">
           Estación Cultural Bouwer.
         </span>
         <br />
@@ -12,7 +12,7 @@ export function Heading() {
       </h1>
       <a
         href="/actividades"
-        className="inline-flex items-center justify-center px-5 py-3 mt-4 text-base font-medium text-center dark:text-red-500 rounded-lg hover:text-red-300 hover:border-red-300 border border-red-500 focus:ring-4 focus:ring-red-800 dark:focus:ring-red-900">
+        className="inline-flex items-center justify-center px-5 py-3 mt-4 text-base font-medium text-center dark:text-gumbo-500 rounded-lg hover:text-gumbo-300 hover:border-gumbo-300 border border-gumbo-500 focus:ring-4 focus:ring-gumbo-800 dark:focus:ring-gumbo-900">
         Visita actividades
         <svg
           className="w-3.5 h-3.5 ms-2 rtl:rotate-180"

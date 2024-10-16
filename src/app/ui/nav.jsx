@@ -133,15 +133,15 @@ export function PhoneNavegacion() {
 export function Nav() {
   const path = usePathname();
   return (
-    <nav className="fixed z-50 w-screen text-[11px] sm:text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 overflow-hidden">
+    <nav className="fixed z-50 w-screen text-[11px] sm:text-sm font-medium text-center text-gumbo-500 border-b border-gumbo-200 dark:text-gumbo-400 dark:border-gumbo-700 overflow-hidden">
       <div className="flex justify-end md:justify-center md:items-center">
         <ul className="hidden md:flex">
           {menu.map((datos) => (
             <li key={datos.nombre} className="me-2">
               <Link
                 href={datos.href}
-                className={`inline-block p-4 border-b-2 border-transparent hover:text-red-600 hover:border-red-300 dark:hover:text-red-300 ${
-                  path == datos.href ? "text-red-300" : ""
+                className={`inline-block p-4 border-b-2 border-transparent hover:text-gumbo-600 hover:border-gumbo-300 dark:hover:text-gumbo-300 ${
+                  path == datos.href ? "text-gumbo-300" : ""
                 }`}>
                 {datos.nombre}
               </Link>
