@@ -18,10 +18,10 @@ export default function Home() {
           alt="estacion de bouwer"
         />
       </section>
-      <section className="bg-gumbo-500 rounded-3xl">
+      <section className="bg-gumbo-200 rounded-3xl">
         <Propuestas />
       </section>
-      <section className="bg-gumbo-500 rounded-3xl">
+      <section className="bg-gumbo-200 rounded-3xl">
         <Nosotros />
       </section>
     </div>

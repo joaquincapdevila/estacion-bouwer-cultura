@@ -7,7 +7,7 @@ export function CardStuff() {
       {stuff.map((data) => (
         <li
           key={data.name}
-          className="w-full m-auto max-w-sm p-6 col-span-1 gap-3 border hover:border-red-950 hover:scale-95 hover:cursor-pointer transition-all rounded-3xl border-red-500  text-white">
+          className="w-full m-auto max-w-sm p-6 col-span-1 gap-3 bg-gradient-to-br from-gumbo-200 to-gumbo-400 border hover:border-gumbo-950 hover:cursor-pointer transition-all rounded-3xl border-gumbo-500  text-white">
           <div className="flex flex-col items-center gap-4 pb-4">
             <Image
               className="w-10 h-10 rounded-full object-cover"
