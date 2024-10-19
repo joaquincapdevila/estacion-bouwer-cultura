@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Para navegadores basados en WebKit */
+}

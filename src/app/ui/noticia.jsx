@@ -1,17 +1,12 @@
+"use client";
 import Image from "next/image";
-import { customers, noticiasjson } from "../lib/placeholder-data";
-
-import estacion1 from "../../../public/estacion2.jpg";
-import jornadaArtistica from "../../../public/jornada-artistica.jpg";
-import jornadaArtistica1 from "../../../public/jornada-artistica1.jpg";
-import jornadaArtistica2 from "../../../public/jornada-artistica2.jpg";
-import jornadaArtistica3 from "../../../public/jornada-artistica3.jpg";
+import { noticiasjson } from "../lib/placeholder-data";
+import { useState } from "react";
 import jornadaArtistica4 from "../../../public/jornada-artistica4.jpg";
-import { resolve } from "styled-jsx/css";
 
 export function ListNoticias(props) {
   return (
-    <ul>
+    <ul className="flex flex-col-reverse">
       {noticiasjson.map((data) => (
         <li key={data.id}>
           <Noticia
@@ -48,7 +43,7 @@ export function NoticiaPrimaria({ noticia }) {
       <a
         href="#"
         className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
-        Learn more
+        Leer más
         <svg
           className="w-2.5 h-2.5 ms-2 rtl:rotate-180"
           aria-hidden="true"
@@ -68,7 +63,8 @@ export function NoticiaPrimaria({ noticia }) {
   );
 }
 
-export function Noticia(props) {
+export function Noticia({ categoria, title, descripcion }) {
+  const [showFullDescription, setShowFullDescription] = useState(false);
   return (
     <article
       className="p-4 md:p-8 border-b border-gumbo-300"
@@ -76,31 +72,36 @@ export function Noticia(props) {
       role="tabpanel"
       aria-labelledby="about-tab">
       <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-        {props.categoria}
+        {categoria}
       </span>
       <h2 className="mb-3 text-2xl font-extrabold tracking-tight border-b-2 border-transparent hover:text-gumbo-950 hover:border-gumbo-600">
-        {props.title}
+        {title}
       </h2>
-      <p className="mb-3">{props.descripcion}</p>
-      <a
-        href="#"
-        className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
-        Learn more
-        <svg
-          className=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10">
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m1 9 4-4-4-4"
-          />
-        </svg>
-      </a>
+      <p className="mb-3">
+        {showFullDescription ? descripcion : `${descripcion.slice(0, 100)}...`}
+      </p>
+      {descripcion.length > 100 && (
+        <a
+          href="#"
+          onClick={() => setShowFullDescription(!showFullDescription)}
+          className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
+          {showFullDescription ? "Leer menos" : "Leer más"}
+          <svg
+            className="w-2.5 h-2.5 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+        </a>
+      )}
     </article>
   );
 }
